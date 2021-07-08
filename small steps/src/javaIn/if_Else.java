@@ -27,8 +27,8 @@ public class if_Else {
 		System.out.println("Good nigth");
 	}
 	else {
-		System.out.println("inform the time:");
-		x = sc.nextInt();
+		System.out.println("invalid time");
+		
 	}
 	sc.close();
 	}
