@@ -18,8 +18,24 @@ public class objecteAndtoString {
 		System.out.print("Price: ");
 		product.price = sc.nextDouble();
 		System.out.print("Qauntity in stock: ");
+		product.quantity = sc.nextInt();
 		
 		System.out.println(product.toString());
+			System.out.println("");//line in white
+		System.out.print("to add in stock: ");
+		int quantity = sc.nextInt();
+		product.addProduct(quantity);
+		
+			System.out.println();//line in white
+		System.out.println("Updated data:  " + product);
+		
+			System.out.println();//line in white
+		System.out.print("to remove product in the stock: ");
+		quantity = sc.nextInt();
+		product.removeProduct(quantity);
+		
+		System.out.println();//line in white
+		System.out.println("Updated data:  " + product);
 		
 		sc.close();
 	}
