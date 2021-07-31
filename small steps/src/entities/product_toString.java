@@ -6,6 +6,10 @@ public class product_toString {
 	public double price;
 	public int quantity;
 	
+	public product_toString() {//using overload
+		
+	}
+	
 	public product_toString(String name, double price, int quantity) {
 		this.name = name;
 		this.price = price;
