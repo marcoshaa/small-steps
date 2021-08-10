@@ -7,40 +7,43 @@ import entities.useBank;
 public class cadBank {
 
 	public static void main (String[] args) {
-		
-		char x;
-		
+	
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		
-		useBank us = new useBank();
+		useBank useBank;
 		
 		System.out.print("Enter account number: ");
-		us.setNr(sc.nextInt());
-		
-		sc.nextLine();
-		
+		int nr = sc.nextInt();
 		System.out.print("Enter account holder: ");
-		us.setName(sc.nextLine());
-		
-		System.out.print("Is there na initial deposit (y/n) ? ");
-		x = sc.next().charAt(0);
-		if (x == 'y' ){
-			
-		System.out.print("Enter initial deposit value: ");
-		us.setValue(sc.nextDouble());
-		System.out.print("");//line in white
-			
-		} else {
-			System.out.print("");//line in white
+		sc.nextLine();
+		String name = sc.nextLine();
+		System.out.print("is there na initial deposit (y/n)? ");
+		char response = sc.next().charAt(0);
+		if (response == 'y') {
+			System.out.print("Enter initial deposit value: ");
+			double depinitial = sc.nextDouble();
+		 useBank = new useBank (nr, name, depinitial);
 		}
-		System.out.println("Accout data: ");
+		else {
+			useBank = new useBank(nr, name);
+		}
+		System.out.println();
+		System.out.println("Account data: ");
+		System.out.println(useBank);
 		
-		System.out.print(us.toString());
-		
-		System.out.print("");//line in white
+		System.out.println();
 		System.out.print("Enter a deposit value: ");
+		double depvalue = sc.nextDouble();
+		useBank.deposit(depvalue);
+		System.out.println("Updated account data: ");
+		System.out.println(useBank);
 		
+		System.out.println();
+		System.out.print("Enter a withdraw value: ");
+		double withdraw = sc.nextDouble();
+		useBank.withdraw(withdraw);
+		System.out.println("Updated account data: ");
+		System.out.println(useBank);
 		
 		
 		sc.close();

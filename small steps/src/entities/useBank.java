@@ -5,47 +5,44 @@ public class useBank {
 	private int nr;
 	private String name;
 	private double value;
-
 	
-	public useBank() {
-		
+	public useBank(int nr, String name) {
+		this.nr = nr;
+		this.name = name;
 	}
-	
-
-	
-	public double getValue() {
-		return value;
+	public useBank(int nr, String name, double depinitial) {		
+		this.nr = nr;
+		this.name = name;
+		deposit(depinitial);
 	}
-
-	public void setValue(double value) {
-		this.value = value;
+	public int getNr() {
+		return nr;
 	}
 
 	public String getName() {
 		return name;
 	}
-	
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public int getNr() {
-		return nr;
+	public double getValue() {
+		return value;
 	}
 	
-	public void setNr(int nr) {
-		this.nr = nr;
+	public void deposit(double amount) {
+		value += amount;
 	}
-	
+
+	public void withdraw(double amount) {
+		value -= amount + 5.00;
+	}
 	public String toString() {
 		return "Account "
-				+ getNr()
-				+", "
-				+"Holder: "
-				+ getName()
-				+", "
-				+"Balance: $ "
-				+String.format("%.2f", getValue());
+				+ nr
+				+", Holder: "
+				+ name
+				+", Balance: $ "
+				+String.format("%.2f", value);
+				
 	}
-	
 }
