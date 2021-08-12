@@ -15,11 +15,24 @@ public class vector {
 		
 		prodVector[] vect = new prodVector[n];
 		
-		for (int i=0; i<n; i++) {
-			sc.nextInt();
+		for (int i=0; i<vect.length; i++) {
+			sc.nextLine();
 			String name = sc.nextLine();
 			double price = sc.nextDouble();
+			vect[i] = new prodVector(name, price);
+			
 			}
+		
+		double sum = 0;
+			for (int i=0; i<vect.length; i++) {
+				sum += vect[i].getPrice();
+				
+			}
+		
+		double med = sum / vect.length;
+		
+		System.out.printf("Average Price: %.2f%n", med);
+		
 	sc.close();
 	}
 }
