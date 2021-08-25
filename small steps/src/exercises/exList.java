@@ -37,14 +37,20 @@ public class exList {
 		
 		System.out.print("Enter the employee id that will have salary increase: ");
 		int idsalar = sc.nextInt();
-		Integer po = position(list,idsalar);
-		
+		Integer po = hasId(list,idsalar);
+		if(po==null) {
+			System.out.print("This id does not exist!");
+		}
+		else {
+			System.out.print("Enter the percentage: ");
+			double perc = sc.nextDouble();
+			list.get(po).ausalary(perc);
+		}
 			System.out.println();
-			System.out.print("List of employees: ");
-			
-				System.out.print("");
-						
-		
+			System.out.println("List of employees: ");
+		for(supExList exList : list) {
+			System.out.println(exList);
+		}
 	sc.close();
 	}
 	

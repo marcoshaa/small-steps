@@ -37,5 +37,9 @@ public class supExList {
 		this.salary = salary + (salary * (percSalary /100));
 	}
 	
+	public String toString() {
+		return  id+ ", " + name + ", " + String.format("%.2f", salary);
+	}
+	
 	
 }
