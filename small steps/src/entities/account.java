@@ -4,7 +4,7 @@ public class account {
 
 	private Integer number;
 	private String holde;
-	private Double balance;
+	protected Double balance;
 	
 	public account() {
 		
