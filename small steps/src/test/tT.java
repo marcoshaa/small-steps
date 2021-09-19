@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class tT {
 
-	public static void mian(String[] args) {
+	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 
@@ -13,10 +13,9 @@ public class tT {
 		
 		for(int i=0;i<11;i++ ) {
 			
-			int n1;
+			 System.out.println("Tabuada do "+n1+": "+ i * n1);
 			
 		}
-		
 	sc.close();
 	}
 }
