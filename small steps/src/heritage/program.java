@@ -13,7 +13,25 @@ public class program {
 		
 		account acc1 = bacc;
 		account acc2 = new BusinessAccount(1003, "Fernanda", 0.0, 300.0);
-		account acc3 = new SavAccount(1004, "Anna", 500.00, 0.01); 
+		account acc3 = new SavAccount(1004, "Anna", 500.00, 0.01);
+		
+		BusinessAccount acc4 = (BusinessAccount)acc2;
+		acc4.loan(100.0);
+		
+		if(acc3 instanceof BusinessAccount) {
+			BusinessAccount acc5 = (BusinessAccount)acc3;	
+			acc5.loan(200.0);
+			System.out.println("LOAN !!");
+			
+		}
+		
+		if(acc3 instanceof SavAccount) {
+			
+			SavAccount acc5 = (SavAccount)acc3;
+			acc5.updateBalance();
+			System.out.println("UPDATE !!");
+			
+		}
 	}
 
 }
