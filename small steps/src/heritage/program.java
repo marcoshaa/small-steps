@@ -32,6 +32,15 @@ public class program {
 			System.out.println("UPDATE !!");
 			
 		}
+		
+		account x = new account(1020, "alex", 1000.0);
+		account y = new SavAccount(1020, "Bob", 1000.0, 0.01);
+		
+		x.withdraw(50);
+		y.withdraw(50);
+		
+		System.out.println(x.getBalance());
+		System.out.println(y.getBalance());
 	}
 
 }
