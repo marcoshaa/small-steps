@@ -11,7 +11,7 @@ public class OutsourcedEmployee extends employee{
 	
 	public OutsourcedEmployee(String name, Integer hr, Double valueHr, Double addB) {
 		super(name, hr, valueHr);
-		this.addB = addB;
+		this.addB = addB; 
 		
 	}
 }
