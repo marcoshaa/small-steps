@@ -16,7 +16,7 @@ public class delta {
 		System.out.print("Insira a variavel B : ");
 		float b = sc.nextFloat();
 		
-		System.out.print("Insira a variavel C : ");
+		System.out.print("Insira a variavel C :   ");
 		float c = sc.nextFloat();
 		
 		float del = b*b -(4*a*c);
