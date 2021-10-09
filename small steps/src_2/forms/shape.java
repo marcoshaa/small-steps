@@ -1,11 +1,29 @@
 package forms;
 
-public class shape {
-	
-	public static void mian(String[] args) {
+import forms.enums.Color;
+
+public abstract class shape {
 		
-		color color;
-		double area;
-	}
+		private Color color;
+		
+		public shape(){
+			
+		}
+
+		public shape(Color color) {
+			this.color = color;
+		}
+
+
+
+		public Color getColor() {
+			return color;
+		}
+
+		public void setColor(Color color) {
+			this.color = color;
+		}
+	
+		public abstract double area();
 
 }
