@@ -1,3 +1,4 @@
+
 package forms.enums;
 
 public enum Color {
